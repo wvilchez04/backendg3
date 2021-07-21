@@ -4,6 +4,7 @@ personas = {}
 nombres=[]
 dnis=[]
 fechas_nac=[]
+ind=[]
 
 cantidad = int(input("Introduce la cantidad de alumnos que vamos a guardar:"))
 for num in range(cantidad):
@@ -13,9 +14,16 @@ for num in range(cantidad):
         print("Persona ya existe.")
         nombre = input("Nombre de la persona:")
     dni = int(input("Ingrese su dni:"))
-    while dni > 0 :
-        dnis.append(dni)
-        dni = int(input("Ingrese dni correctamente:"))
+    dnis.append(dni)
     fecha_nac = datetime.datetime.strptime(input("ingrese su fecha de nacimiento (AAAA/MM/DD): "),"%Y/%m/%d")
     fechas_nac.append(calendar.timegm(fecha_nac.timetuple()))
     
+fechasOrdenadas = list(fechas_nac)
+fechasOrdenadas.sort(reverse=True)
+
+
+for fec in range(cantidad):
+    ind.append(fechas_nac.index(fechasOrdenadas[fec]))
+
+
+print("Personas ordenadas de menor a mayor edad")
