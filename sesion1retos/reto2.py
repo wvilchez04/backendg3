@@ -5,7 +5,7 @@ nombres=[]
 dnis=[]
 fechas_nac=[]
 
-cantidad = int(input("Introduce la cantidad de alumnos que vamos a guradar:"))
+cantidad = int(input("Introduce la cantidad de alumnos que vamos a guardar:"))
 for num in range(cantidad):
     nombre = input("Nombre de la persona:")
     while nombre in personas:
