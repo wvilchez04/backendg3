@@ -19,5 +19,3 @@ for num in range(cantidad):
     fecha_nac = datetime.datetime.strptime(input("ingrese su fecha de nacimiento (AAAA/MM/DD): "),"%Y/%m/%d")
     fechas_nac.append(calendar.timegm(fecha_nac.timetuple()))
     
-for nombres, dnis in personas.items():
-    print("%s ha sacado de nota media %f" % (nombre,sum(dnis)/len(dnis)))
