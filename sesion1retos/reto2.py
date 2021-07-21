@@ -26,4 +26,4 @@ for fec in range(cantidad):
     ind.append(fechas_nac.index(fechasOrdenadas[fec]))
 
 
-print("Personas ordenadas de menor a mayor edad")
+print("Personas ordenadas de joven a mas adulta")
