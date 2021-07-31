@@ -7,8 +7,8 @@ departamentos = [
     {'nombre':'Tacna', 'capital':'Tacna'}
 ]
 
-@app.route('/departamentos/')
-def listarDepartamentos():
+@app.route('/')
+def Lista():
     mensaje = 'Departamentos del Peru'
     return {
         'ok': True,
